@@ -6,3 +6,6 @@ xiwangly_全新的ping
 
 
   （由于部分词汇会被吞掉，使用了转义字符）
+
+
+  ping文件夹用于快捷访问ping\.php
