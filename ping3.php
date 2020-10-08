@@ -1,17 +1,16 @@
 <?php
 $ip = $_GET["ip"];
-$info = array();
 if(substr(php_uname("s"),0,3) == "Win")
 {
 	header("content-type:text/html;charset=GBK");
-	$sc = system("ping $ip",$info);
+	$sc = shell_exec("ping $ip");
 	header("content-type:text/html;charset=UTF-8");
 	echo iconv("GBK","UTF-8",$sc);
 }
 else
 {
 	header("content-type:text/html;charset=UTF-8");
-	$sc = system("ping -c 3 $ip",$info);
+	$sc = shell_exec("ping -c 3 $ip");
 	echo $sc;
 }
 ?>
